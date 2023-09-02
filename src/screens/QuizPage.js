@@ -14,15 +14,14 @@ function QuizPage() {
   const loading = useSelector((state) => state.loading);
 
   useEffect(() => {
-    let isMounted = true; // Add this variable to track component mount status
-
+    let isMounted = true; 
     async function fetchQuestions() {
       try {
         const response = await axios.get(
           "https://opentdb.com/api.php?amount=15"
         );
 
-        if (isMounted) { // Check if the component is still mounted before dispatching
+        if (isMounted) { 
           dispatch({ type: "SET_QUESTIONS", payload: response.data.results });
           dispatch({ type: "SET_LOADING", payload: false });
         }
@@ -34,12 +33,12 @@ function QuizPage() {
     fetchQuestions();
 
     return () => {
-      isMounted = false; // Set isMounted to false when unmounting
+      isMounted = false;
     };
   }, [dispatch]);
 
   const handleQuestionChange = (newIndex) => {
-    // Set the current question as visited
+
     const updatedVisitedQuestions = [...visitedQuestions];
     updatedVisitedQuestions[currentQuestion] = true;
     dispatch({
@@ -60,9 +59,7 @@ function QuizPage() {
     // Move to the next question or handle the end of the quiz
     if (currentQuestion < questions.length - 1) {
       handleQuestionChange(currentQuestion + 1);
-    } else {
-      // Handle end of the quiz here
-    }
+    } 
   };
 
   const handleQuestionSelect = (questionIndex) => {
@@ -82,7 +79,7 @@ function QuizPage() {
               visitedQuestions={visitedQuestions}
               attemptedQuestions={attemptedQuestions}
               onQuestionChange={handleQuestionChange} 
-              onQuestionSelect={handleQuestionSelect} // This is where you pass the function
+              onQuestionSelect={handleQuestionSelect} 
             />
           </div>
           <div className="w-3/4 pr-4">
@@ -94,7 +91,7 @@ function QuizPage() {
                 questionIndex={currentQuestion}
                 totalQuestions={questions.length}
                 onQuestionSubmit={handleQuestionSubmit}
-                onQuestionChange={handleQuestionChange} // Pass the onQuestionChange function
+                onQuestionChange={handleQuestionChange} 
               />
             )}
           </div>

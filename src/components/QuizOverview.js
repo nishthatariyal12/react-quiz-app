@@ -20,7 +20,7 @@ function QuestionOverview({ questions, currentQuestion, onQuestionSelect, onQues
               className={`w-8 h-8 rounded-full mr-2 
                 ${visitedQuestions[index] ? 'bg-blue-500' : 'bg-gray-300'} 
                 ${attemptedQuestions[index] ? 'bg-green-500' : 'bg-blue-500'}
-                ${currentQuestion === index ? 'border-2 border-red-500' : ''}`} // Apply a red border for the current question
+                ${currentQuestion === index ? 'border-2 border-red-500' : ''}`} 
               onClick={() => handleQuestionButtonClick(index)}
             >
               {index + 1}

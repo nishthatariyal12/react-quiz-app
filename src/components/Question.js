@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { useNavigate } from 'react-router-dom'; // Import useHistory
+import { useNavigate } from 'react-router-dom'; 
 
 function Question({ question, questionIndex, totalQuestions, onQuestionChange, onQuestionSubmit }) {
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -10,23 +10,20 @@ function Question({ question, questionIndex, totalQuestions, onQuestionChange, o
     setSelectedAnswer(answer);
     dispatch({
       type: "SET_ATTEMPTED_QUESTION",
-      payload: { index: questionIndex, value: answer }, // Provide the correct index and value
+      payload: { index: questionIndex, value: answer }, 
     });
   };
 
   const handleNextQuestion = () => {
-    // Save selectedAnswer and move to the next question
-    // You can also implement answer validation here
 
-    onQuestionSubmit(selectedAnswer); // Submit the current question with selected answer
+    onQuestionSubmit(selectedAnswer);
 
     if (questionIndex < totalQuestions - 1) {
       
-      onQuestionChange(questionIndex + 1); // Increment the question index
+      onQuestionChange(questionIndex + 1); 
     } else {
       
       navigate('/report'); 
-      // Handle the end of the quiz here
     }
   };
 

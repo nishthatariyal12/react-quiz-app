@@ -10,7 +10,6 @@ function ReportPage() {
     let score = 0;
     questions.forEach((question, index) => {
       if (question.correct_answer === attemptedQuestions[index]) {
-        // If the answer is correct, increment the score
         score++;
       }
     });
