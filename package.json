@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "buffer": "^6.0.3",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3",
     "postcss": "^8.4.29",
     "process": "^0.11.10",
@@ -33,7 +34,8 @@
       "last 3 chrome version",
       "last 3 firefox version",
       "last 3 safari version"
-    ]},
+    ]
+  },
   "author": "",
   "license": "ISC",
   "description": ""
