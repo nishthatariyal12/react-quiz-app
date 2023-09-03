@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 const initialState = {
   email: '', 
-  timer: 1 * 60,
+  timer: 15 * 60,
   score: 0, 
   questions: [], 
   currentQuestionIndex: 0,
