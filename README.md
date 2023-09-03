@@ -9,7 +9,7 @@ I have successfully completed a frontend web app by harnessing a diverse array o
    <li>Tailwind Css</li>
    <li>Parcel-bundler</li>
  
-<h2>Deployment Link: <span>https://main--delightful-sunburst-35c08e.netlify.app/</span></h2>
+<h2>Deployment Link: <span>https://meek-mousse-69aa3e.netlify.app</span></h2>
 # How to run This Code 
    <ol>
 <li>Download the zip file from GitHub.</li>
